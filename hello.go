@@ -70,6 +70,5 @@ func arithmeticOperation(){
 	fmt.Printf("a * b = %v \n", a*b)
 	fmt.Printf("a / b = %v \n", a/b)
 	fmt.Printf("a modulus b is: ", a%b)
-
 }
 
