@@ -35,8 +35,12 @@ func main(){
 	k = strconv.Itoa(i)
 	fmt.Printf("%v , %T \n", k, k)
 
+	var c string = "hello"
+	fmt.Printf("%v , %T \n", c,c)
+
 	primitiveType()
 	arithmeticOperation()
+	bitOperator()
 
 }
 
@@ -69,6 +73,18 @@ func arithmeticOperation(){
 	fmt.Printf("a - b = %v \n", a-b)
 	fmt.Printf("a * b = %v \n", a*b)
 	fmt.Printf("a / b = %v \n", a/b)
-	fmt.Printf("a modulus b is: ", a%b)
+	fmt.Printf("a modulus b is: \n", a%b)
+}
+
+func bitOperator(){
+	a:= 10 //the bit operator is 1010
+	b:= 3 // the bit operator is 0011
+
+	//this system will check a pair of bit operator
+
+	fmt.Println(a & b) // AND OPERATOR. This will return 0 if ONE or more of the pairing operator equals 0. so the result will be: 0010 = 2
+	fmt.Println(a | b) // OR OPERATOR. This will return 1 if ONE or more of the pairing operator equals 1. so the result will be: 1011 = 11
+	fmt.Println(a ^ b) // XOR OPERATOR. This will return 1 if ONE of the operator equals 1, but NOT BOTH equals 1. It will return 0, so the result will be: 1001 = 9
+	fmt.Println(a &^ b) // NOR OPERATOR. This will return 1 if BOTH of operator equals 0, otherwise is 0. This will be: 0100 = 8
 }
 
